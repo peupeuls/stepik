@@ -1,18 +1,18 @@
-a = int(input())
-numbers = []
+a = str(input())
+letters = list(a)
+b=len(letters)
 
-da = False
+sch = 0
+maximum = 0
+new_maximum = 0
+for i in range (0, b):
+        if letters[i] == "Р":
+              sch += 1
+              maximum = sch
+              if new_maximum < maximum:
+                new_maximum = maximum
+        elif letters[i] == "О":
+              sch = 0
 
-for i in range (0, a):
-    numbers.append(int(input()))
 
-chislo = int(input())
-
-for i in range (0, a):
-    for j in range (i+1, a):
-        if numbers[i] * numbers[j] == chislo:
-            da = True
-
-if da:
-    print("ДА")
-else: print("НЕТ")
+print(new_maximum)
