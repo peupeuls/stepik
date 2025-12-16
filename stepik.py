@@ -1,18 +1,17 @@
-a = str(input())
-letters = list(a)
-b=len(letters)
+n = int(input())
+slova = list()
+sch = list()
+for i in range (0, n):
+    slova.append(str(input()))
 
-sch = 0
-maximum = 0
-new_maximum = 0
+b = len(slova)
 for i in range (0, b):
-        if letters[i] == "Р":
-              sch += 1
-              maximum = sch
-              if new_maximum < maximum:
-                new_maximum = maximum
-        elif letters[i] == "О":
-              sch = 0
+    if 'a' in slova[i]:
+        if 'n' in slova[i]:
+            if 't' in slova[i]:
+                if 'o' in slova[i]:
+                    if 'n' in slova[i]:
+                        sch.append(i+1)
 
-
-print(new_maximum)
+result = " ".join(str(x) for x in sch)
+print(result)
