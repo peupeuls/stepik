@@ -1,20 +1,11 @@
-def fact(n):
-    a = 1
-    if n == 0:
-        return 1
-    while n >= 1:
-        a *= n
-        n -= 1
-    return int(a)
+stroka = input().split()
+n = len(stroka)
+my_list = []
+my_list.append([stroka[0]])
+for i in range(1, n):
+    if stroka[i] != stroka [i-1]:
+        my_list.append([stroka[i]])
+    else:
+        my_list[-1].append(stroka[i])
 
-
-def paskal(n):
-    c = []
-    for k in range(n+1):
-        c.append(str(fact(n)//(fact(k)*fact(n-k))))
-    return c
-
-
-n = int(input())
-for i in range(n):
-    print(' '.join(paskal(i)))
+print(my_list)
