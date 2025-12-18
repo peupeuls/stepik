@@ -5,14 +5,16 @@ def fact(n):
     while n >= 1:
         a *= n
         n -= 1
-    return a
+    return int(a)
 
 
 def paskal(n):
     c = []
     for k in range(n+1):
-        c.append(int(fact(n)/(fact(k)*fact(n-k))))
+        c.append(str(fact(n)//(fact(k)*fact(n-k))))
     return c
 
+
 n = int(input())
-print(paskal(n))
+for i in range(n):
+    print(' '.join(paskal(i)))
