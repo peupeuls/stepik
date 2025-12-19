@@ -1,14 +1,25 @@
+n = int(input())
+m = int(input())
+s=[]
+for i in range(n*m):
+    s.append(input())
 
-def chunked():
-    stroka = input().split()
-    m = int(input())
-    n = len(stroka)
-    my_list = []
-    my_list.append([stroka[0]])
-    for i in range(1, n):
+matrix = []
+matrix.append([s[0]])
+for i in range(1, n*m):
         if i % m != 0:
-            my_list[-1].append(stroka[i])
+            matrix[-1].append(s[i])
         else:
-            my_list.append([stroka[i]])
-    print(my_list)
-chunked()
+             matrix.append([s[i]])
+
+for i in range(n):
+     for j in range(m):
+          print(matrix[i][j], end=' ')
+        
+     print()
+
+print()
+for j in range(m):
+     for i in range(n):
+          print(matrix[i][j], end=' ')
+     print()
