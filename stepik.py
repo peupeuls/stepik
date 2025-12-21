@@ -1,25 +1,19 @@
 n = int(input())
-m = int(input())
 s=[]
-for i in range(n*m):
-    s.append(input())
-
-matrix = []
-matrix.append([s[0]])
-for i in range(1, n*m):
-        if i % m != 0:
-            matrix[-1].append(s[i])
-        else:
-             matrix.append([s[i]])
-
 for i in range(n):
-     for j in range(m):
-          print(matrix[i][j], end=' ')
-        
-     print()
+    s.append(str(input()).split())
 
-print()
-for j in range(m):
-     for i in range(n):
-          print(matrix[i][j], end=' ')
-     print()
+summa = 0
+bolshe = 0
+for i in range(n):
+    summa = 0
+    srednee = 0
+    bolshe = 0
+    for j in range(n):
+     summa += int(s[i][j])
+     srednee = summa/n
+    for j in range(n):
+       if int(s[i][j]) > srednee:
+          bolshe += 1
+       else: continue 
+    print(bolshe)
