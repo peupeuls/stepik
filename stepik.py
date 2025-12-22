@@ -3,26 +3,13 @@ m = int(input())
 s=[]
 for i in range(n):
     s.append(str(input()).split())
+columns = str(input()).split()
+col1 = int(columns[0])
+col2 = int(columns[1])
 
-maximum = 0
-proverka = 0
-mnogo = []
+for i in range(n):
+    s[i][col1], s[i][col2] = s[i][col2],s[i][col1]
 for i in range(n):
     for j in range(m):
-      proverka = int(s[i][j])
-      if maximum == 0 or maximum < proverka:
-         maximum = proverka
-    mnogo.append(maximum)
-bolshoi = max(mnogo)
-
-flag = False
-for i in range(n):
-   for j in range(m):
-      if s[i][j] == str(bolshoi):
-         print(str(i) + ' ' + str(j))
-         flag = True
-         break
-   if flag:
-      break
-         
-
+        print(s[i][j], end = ' ')
+    print()
