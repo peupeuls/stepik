@@ -1,19 +1,13 @@
-n = int(input())
-s=[]
-for i in range(n):
-    s.append(str(input()).split())
 
-flag = True
+s = input().split()
+n = len(s)
+sublist = [[]]
 for i in range(n):
-    for j in range(n):
-        if s[i][j] != s[j][i]:
-            print('NO')
-            flag = False
-            break
-    if not flag:
-        break        
-if flag:
-    print('YES')
-        
+   for j in range(n):
+         if s[i:j+1]:
+              sublist.append(s[i:j+1])
+print(sublist)
+
+
          
       
