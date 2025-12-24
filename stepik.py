@@ -1,13 +1,12 @@
+n = int(input())
+s = []
+for i in range (n):
+   s.append(str(input()).split())
 
-s = input().split()
-n = len(s)
-sublist = [[]]
+for i in range(n):
+   s[i][i], s[n-1-i][i] = s[n-1-i][i],s[i][i]
+
 for i in range(n):
    for j in range(n):
-         if s[i:j+1]:
-              sublist.append(s[i:j+1])
-print(sublist)
-
-
-         
-      
+      print(s[i][j], end = ' ')
+   print()
