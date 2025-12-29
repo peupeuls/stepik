@@ -1,13 +1,15 @@
 n = int(input())
-s = []
 for i in range (n):
-   s.append(str(input()).split())
-
-'''for i in range(n):
-   for j in range(n):
-      s[i][j]'''
+    s = [[0] * n for _ in range(n)]
 
 for i in range(n):
-   for j in range(n):
-      print(s[n-1-j][i], end = ' ')
-   print()
+    for j in range(n):
+        if j == n - i - 1:
+            s[i][j] = 1
+        elif j > n - i - 1:
+            s[i][j] = 2
+
+for i in range(n):
+    for j in range(n):
+        print(s[i][j], end = ' ')
+    print()
