@@ -1,16 +1,12 @@
-chisla = input().split()
-n = int(chisla[0])
-m = int(chisla[1])
-
+n = int(input())
 for i in range (n):
-    s = [[0] * m for _ in range(n)]
-chislo = 1
-for j in range(m):
-    for i in range(n):
-        s[i][j] = chislo
-        chislo += 1
+    s = [[0] * n for _ in range(n)]
 
 for i in range(n):
-    for j in range(m):
+    for j in range(n):
+        if (i == j) | (j == n - i -1):
+            s[i][j] = 1
+for i in range(n):
+    for j in range(n):
         print(s[i][j], end = ' ')
     print()
