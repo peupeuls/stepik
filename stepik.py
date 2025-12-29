@@ -5,8 +5,8 @@ m = int(chisla[1])
 for i in range (n):
     s = [[0] * m for _ in range(n)]
 chislo = 1
-for i in range(n):
-    for j in range(m):
+for j in range(m):
+    for i in range(n):
         s[i][j] = chislo
         chislo += 1
 
