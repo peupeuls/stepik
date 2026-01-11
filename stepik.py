@@ -1,19 +1,18 @@
 n = int(input())
-s=[]
+s = [[0] * n for _ in range(n)]
+
+ch = 1
 for i in range(n):
-    s.append(str(input()).split())
+    for j in range(n):
+        for k in range(1, n):
+            if i - j == k:
+                s[i][j] = k
+            if j - i == k:
+                s[i][j] = k
 
-
-flag = True
 
 for i in range(n):
-    for j in range(1, n + 1):
-        if str(j) not in s[i] or str(j) not in [s[k][i] for k in range(n)]:
-            print('NO')
-            flag = False
-            break
-    if not flag:
-        break
-if flag:
-    print('YES')
-
+    for j in range(n):
+        print(s[i][j], end = ' ')
+    print()
+        
