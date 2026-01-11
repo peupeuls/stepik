@@ -1,22 +1,29 @@
-chisla = input().split()
-n = int(chisla[0])
-m = int(chisla[1])
+chisla1 = input().split()
+n = int(chisla1[0])
+m = int(chisla1[1])
 
 matrix1 = []
-matrix2 = []
 for i in range(n):
     matrix1.append(input().split())
+    
 probel = input()
-for i in range(n):
+
+chisla2 = input().split()
+k = int(chisla2[0])
+p = int(chisla2[1])
+
+matrix2 = []
+for i in range(k):
     matrix2.append(input().split())
 
-summa = [[0] * m for _ in range(n)]
+umn = [[0] * p for _ in range(n)]
 
 for i in range(n):
-    for j in range(m):
-        summa[i][j] = int(matrix1[i][j]) + int(matrix2[i][j])
+    for j in range(p):
+        for l in range(m):
+            umn[i][j]+= int(matrix1[i][l]) * int(matrix2[l][j])
 
 for i in range(n):
-    for j in range(m):
-        print(summa[i][j], end = ' ')
+    for j in range(p):
+        print(umn[i][j], end = ' ')
     print()
