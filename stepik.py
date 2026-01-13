@@ -1,12 +1,5 @@
 n = int(input())
-spisok = []
+f1, f2 = 1, 1
 for i in range(n):
-    spisok.append(input())
-
-for i in range(n):
-    print(spisok[i])
-print()
-
-for item in spisok:
-    if '4' in item or '5' in item:
-        print(item)
+    print(f1)
+    f1, f2 = f2, f1 + f2
