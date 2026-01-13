@@ -1,18 +1,9 @@
-n = int(input())
-s = [[0] * n for _ in range(n)]
-
-ch = 1
+tuples = [(10, 20, 40), (40, 50, 60), (70, 80, 90), (10, 90), (1, 2, 3, 4), (5, 6, 10, 2, 1, 77)]
+new_tuples = []
+n = len(tuples)
 for i in range(n):
-    for j in range(n):
-        for k in range(1, n):
-            if i - j == k:
-                s[i][j] = k
-            if j - i == k:
-                s[i][j] = k
-
-
-for i in range(n):
-    for j in range(n):
-        print(s[i][j], end = ' ')
-    print()
-        
+    a = list(tuples[i])
+    a[-1] = 100
+    b = tuple(a)
+    new_tuples.append(b)
+print(new_tuples)
