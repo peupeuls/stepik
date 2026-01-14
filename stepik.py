@@ -1,10 +1,9 @@
-s1 = input().split()
+n = int(input())
+slova = []
+for i in range(n):
+    slova.append(input())
 
-set1 = set(s1[0])
-set2 = set(s1[1])
-set3 = set(s1[2])
 
-if set1 == set2 == set3:
-    print("YES")
-else:
-    print("NO")
+for i in range(n):
+    m = len(set((slova[i]).lower()))
+    print(m)
