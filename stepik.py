@@ -1,12 +1,10 @@
-s1 = input()
-s2 = input()
-total = s1 + s2
-flag = True
-for i in range(10):
-    if str(i) not in total:
-        flag = False
+s1 = input().split()
 
-if flag:
+set1 = set(s1[0])
+set2 = set(s1[1])
+set3 = set(s1[2])
+
+if set1 == set2 == set3:
     print("YES")
 else:
     print("NO")
