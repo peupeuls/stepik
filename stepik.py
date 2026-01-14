@@ -1,9 +1,12 @@
-n = int(input())
-m = int(input())
-k = int(input())
-x = int(input())
-y = int(input())
-z = int(input())
+s1 = input()
+s2 = input()
+total = s1 + s2
+flag = True
+for i in range(10):
+    if str(i) not in total:
+        flag = False
 
-total = (n-x) + (k-y) + m + z
-print(total)
+if flag:
+    print("YES")
+else:
+    print("NO")
