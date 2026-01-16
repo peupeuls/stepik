@@ -1,12 +1,10 @@
-# n = set(input().replace(' ', ''))
-# m = set(input().replace(' ', ''))
-
-# s = n & m
-# print(s)
-n = (input().lower()).split()
-s = set()
+n = input().split()
+check = []
 for i in range(len(n)):
-    new_n = n[i].strip('.,;:-?!')
-    s.add(new_n)
+    if int(n[i]) in check:
+        print("YES")
+    elif int(n[i]) not in check:
+        print("NO")
+    check.append(int(n[i]))
 
-print(len(s))
+
