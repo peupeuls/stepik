@@ -1,10 +1,7 @@
-m = int(input())
-n = int(input())
-
-dom = [input() for _ in range(m)]
-spis = [input() for _ in range(n)]
-for i in range(n):
-    if spis[i] in dom:
-        print('YES')
-    else:
-        print('NO')
+set1 = set(input().split())
+set2 = set(input().split())
+set3 = set1 & set2
+if set3:
+    print(*sorted(set3, reverse = True, key = int))
+if not set3:
+    print('BAD DAY')
