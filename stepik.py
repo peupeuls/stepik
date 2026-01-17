@@ -1,7 +1,9 @@
-m = input().split()
-n = input().split()
-
-set1 = set(m)
-set2 = set(n)
-set3 = set1 | set2
-print(*sorted(set3))
+m = int(input())
+n = int(input())
+list1 = [input() for _ in range(m+n)]
+set1 = set(list1)
+s = len(list1) - ((len(list1)-len(set1))*2)
+if s:
+    print(s)
+else:
+    print('NO')
