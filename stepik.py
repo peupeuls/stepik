@@ -3,5 +3,6 @@ list1 = (sentence.lower()).split()
 set1 = set()
 for i in range(len(list1)):
     new_s = (list1[i].lower()).strip('.,;:-?!()')
-    set1.add(new_s)
+    if len(new_s) < 4:
+        set1.add(new_s)
 print(*sorted(set1))
