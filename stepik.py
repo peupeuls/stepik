@@ -1,7 +1,3 @@
-set1 = input().split()
-set2 = input().split()
-set3 = input().split()
-set4 = set(set1) | set(set2) 
-set5 = set(set3) - set(set4)
-for elem in sorted(set5, reverse = True, key = int):
-    print(elem, end = " ")
+items = [10, '30', 30, 10, '56', 34, '12', 90, 89, 34, 45, '67', 12, 10, 90, 23, '45', 56, '56', 1, 5, '6', 5]
+set1 = {int(d) for d in items}
+print(*sorted(set1))
