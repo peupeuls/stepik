@@ -3,5 +3,8 @@ n = int(input())
 
 set1 = {input() for _ in range(m)}
 set2 = {input() for _ in range(n)}
-set3 = set1 - set2
-print(len(set3))
+set3 = set1 ^ set2
+if set3:
+    print(len(set3))
+else:
+    print('NO')
