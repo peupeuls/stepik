@@ -1,10 +1,7 @@
-m = int(input())
-n = int(input())
+m = input().split()
+n = input().split()
 
-set1 = {input() for _ in range(m)}
-set2 = {input() for _ in range(n)}
-set3 = set1 ^ set2
-if set3:
-    print(len(set3))
-else:
-    print('NO')
+set1 = set(m)
+set2 = set(n)
+set3 = set1 | set2
+print(*sorted(set3))
