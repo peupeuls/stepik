@@ -1,8 +1,4 @@
-sentence = '''My very photogenic mother died in a freak accident (picnic, lightning) when I was three, and, save for a pocket of warmth in the darkest past, nothing of her subsists within the hollows and dells of memory, over which, if you can still stand my style (I am writing under observation), the sun of my infancy had set: surely, you all know those redolent remnants of day suspended, with the midges, about some hedge in bloom or suddenly entered and traversed by the rambler, at the bottom of a hill, in the summer dusk; a furry warmth, golden midges.'''
-list1 = (sentence.lower()).split()
-set1 = set()
-for i in range(len(list1)):
-    new_s = (list1[i].lower()).strip('.,;:-?!()')
-    if len(new_s) < 4:
-        set1.add(new_s)
+files = ['python.png', 'qwerty.py', 'stepik.png', 'beegeek.org', 'windows.pnp', 'pen.txt', 'phone.py', 'book.txT', 'board.pNg', 'keyBoard.jpg', 'Python.PNg', 'apple.jpeg', 'png.png', 'input.tXt', 'split.pop', 'solution.Py', 'stepik.org', 'kotlin.ko', 'github.git']
+files1 = [s.lower() for s in files]
+set1 = {n for n in files1 if 'png' in n}
 print(*sorted(set1))
