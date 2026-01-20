@@ -1,23 +1,17 @@
-pets = [('Hatiko', 'Parker', 'Wilson', 50),
-        ('Rusty', 'Josh', 'King', 25),
-        ('Fido', 'John', 'Smith', 28),
-        ('Butch', 'Jake', 'Smirnoff', 18),
-        ('Odi', 'Emma', 'Wright', 18),
-        ('Balto', 'Josh', 'King', 25),
-        ('Barry', 'Josh', 'King', 25),
-        ('Snape', 'Hannah', 'Taylor', 40),
-        ('Horry', 'Martha', 'Robinson', 73),
-        ('Giro', 'Alex', 'Martinez', 65),
-        ('Zooma', 'Simon', 'Nevel', 32),
-        ('Lassie', 'Josh', 'King', 25),
-        ('Chase', 'Martha', 'Robinson', 73),
-        ('Ace', 'Martha', 'Williams', 38),
-        ('Rocky', 'Simon', 'Nevel', 32)]
-
-
-result = {}
-for s in pets:
-    if s[1:4] not in result:
-        result[s[1:4]] = [s[0]]
+s = input().split()
+new_s = []
+for i in range(len(s)):
+    new_s.append((s[i].lower()).strip('.,;:-?!()'))
+r = {}
+for w in new_s:
+    if w not in r:
+        r[w] = 1
     else:
-        result[s[1:4]].append(s[0])
+        r[w] += 1
+
+m = min(r.values())
+n = []
+for key in r.keys():
+    if r[key] == m:
+        n.append(key)
+print(min(n))
