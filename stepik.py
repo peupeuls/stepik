@@ -1,9 +1,9 @@
-m = int(input())
-n = int(input())
-list1 = [input() for _ in range(m+n)]
-set1 = set(list1)
-s = len(list1) - ((len(list1)-len(set1))*2)
-if s:
-    print(s)
-else:
-    print('NO')
+numbers = [9, 8, 32, 1, 10, 1, 10, 23, 1, 4, 10, 4, 2, 2, 2, 2, 1, 10, 1, 2, 2, 32, 23, 23]
+
+result = {}
+for num in numbers:
+    if num not in result:
+        result[num] = 1
+    else:
+        result[num] += 1
+print(result)
