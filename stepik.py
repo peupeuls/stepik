@@ -1,4 +1,10 @@
-sl = {0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine'}
-n = input()
-for i in range(len(n)):
-    print(sl[int(n[i])], end = ' ')
+n = int(input())
+sl = {}
+for i in range(n):
+    key, value = input().split(': ')
+    sl[key.lower()] = value
+m = int(input())
+for i in range(m):
+    slovo = input().lower()
+    s = sl.get(slovo, 'Не найдено')
+    print(s)
