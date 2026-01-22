@@ -1,10 +1,12 @@
-n = int(input())
-sl = {}
-for i in range(n):
-    key, value = input().split(': ')
-    sl[key.lower()] = value
-m = int(input())
-for i in range(m):
-    slovo = input().lower()
-    s = sl.get(slovo, 'Не найдено')
-    print(s)
+s = list(input())
+m = list(input())
+if len(s) != len(m):
+    print('NO')
+else:
+    for i in range(len(s)):
+        if s[i] in m:
+            m.remove(s[i])
+        else:
+            print('NO')
+    if len(m) == 0:
+        print('YES')
